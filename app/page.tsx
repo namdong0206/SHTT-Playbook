@@ -170,11 +170,6 @@ export default function PlaybookPage() {
                     ? "Nâng tầm tri thức Sở hữu trí tuệ" 
                     : PLAYBOOK_DATA.find(t => t.id === activeTopicId)?.title}
                 </h2>
-                <p className="text-lg text-zinc-500 max-w-3xl leading-relaxed font-medium">
-                  {activeTopicId === 'all' 
-                    ? 'Phân tích toàn diện về khung khổ pháp lý, thực trạng thực thi và các xu hướng công nghệ mới nhất trong lĩnh vực SHTT tại Việt Nam.' 
-                    : `Chi tiết về các nội dung trọng tâm trong phần ${PLAYBOOK_DATA.find(t => t.id === activeTopicId)?.title.toLowerCase()}.`}
-                </p>
               </motion.div>
             </div>
 
