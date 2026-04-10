@@ -30,7 +30,7 @@ import { PlaybookSubTopic } from '@/lib/data';
 import { ChevronRight, BarChart3, Info, Printer, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const COLORS = ['#006974', '#6834eb', '#a14200', '#ffa273', '#5c20df'];
+const COLORS = ['#8d4b00', '#006a61', '#ad2a27', '#ffb77d', '#6bd8cb'];
 
 interface PlaybookCardProps {
   subTopic: PlaybookSubTopic;

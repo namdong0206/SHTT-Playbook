@@ -1,11 +1,11 @@
 import type {Metadata} from 'next';
 import './globals.css';
-import { Newsreader, Be_Vietnam_Pro } from "next/font/google";
+import { Newsreader, Manrope } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const beVietnam = Be_Vietnam_Pro({ 
+const manrope = Manrope({ 
   subsets: ["latin"], 
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-sans" 
 });
 const newsreader = Newsreader({ 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="vi" className={cn("font-sans", beVietnam.variable, newsreader.variable)}>
+    <html lang="vi" className={cn("font-sans", manrope.variable, newsreader.variable)}>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );

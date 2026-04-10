@@ -87,12 +87,12 @@ export default function PlaybookPage() {
               className={cn(
                 "w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-[12px] font-bold transition-all duration-300",
                 activeTopicId === 'all' 
-                  ? "bg-sidebar-accent text-sidebar-accent-foreground shadow-md" 
-                  : "opacity-50 hover:opacity-100 hover:bg-sidebar-accent/20"
+                  ? "bg-amber-900/10 text-amber-900 shadow-sm" 
+                  : "opacity-50 hover:opacity-100 hover:bg-amber-900/5"
               )}
             >
               <LayoutGrid className="w-4 h-4" />
-              Tổng quan hệ thống
+              Toàn bộ nội dung
             </button>
             
             <div className="pt-6 pb-3">
@@ -125,39 +125,39 @@ export default function PlaybookPage() {
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col min-w-0 min-h-0">
-        <header className="h-16 bg-white/80 backdrop-blur-xl border-b border-zinc-100 flex items-center justify-between px-6 shrink-0 z-20 sticky top-0">
+        <header className="h-16 bg-background/80 backdrop-blur-xl border-b border-border/50 flex items-center justify-between px-6 shrink-0 z-20 sticky top-0">
           <div className="flex items-center gap-6 flex-1 max-w-2xl">
             <button 
               onClick={() => setIsSidebarOpen(true)}
-              className="md:hidden p-2 -ml-2 text-zinc-500 hover:bg-zinc-100 rounded-lg transition-colors"
+              className="md:hidden p-2 -ml-2 text-muted-foreground hover:bg-muted rounded-lg transition-colors"
             >
               <Menu className="w-5 h-5" />
             </button>
             <div className="relative flex-1 group">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-zinc-400 group-focus-within:text-primary transition-colors" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-muted-foreground group-focus-within:text-primary transition-colors" />
               <input
                 type="text"
                 placeholder="Tìm kiếm quy định, số liệu, xu hướng..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-zinc-50 border-transparent focus:bg-white focus:ring-1 focus:ring-primary/20 rounded-xl text-[12px] font-medium transition-all outline-none shadow-sm"
+                className="w-full pl-10 pr-4 py-2 bg-muted/50 border-transparent focus:bg-background focus:ring-1 focus:ring-primary/20 rounded-xl text-[12px] font-medium transition-all outline-none shadow-sm"
               />
             </div>
           </div>
           
           <div className="flex items-center gap-4 ml-6">
             <div className="hidden lg:flex flex-col items-end">
-              <p className="text-[12px] font-black text-zinc-900">Cục Sở hữu trí tuệ</p>
-              <p className="text-[8px] font-black text-zinc-400 uppercase tracking-[0.1em]">Hệ thống Playbook</p>
+              <p className="text-[12px] font-black text-foreground">Cục Sở hữu trí tuệ</p>
+              <p className="text-[8px] font-black text-muted-foreground uppercase tracking-[0.1em]">Hệ thống Playbook</p>
             </div>
-            <div className="w-9 h-9 rounded-xl bg-zinc-50 border border-zinc-100 flex items-center justify-center shadow-sm hover:shadow-md transition-all cursor-pointer group">
-              <Users className="w-4 h-4 text-zinc-400 group-hover:text-primary transition-colors" />
+            <div className="w-9 h-9 rounded-xl bg-muted/50 border border-border/50 flex items-center justify-center shadow-sm hover:shadow-md transition-all cursor-pointer group">
+              <Users className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
             </div>
           </div>
         </header>
 
         {/* Content Area */}
-        <div className="flex-1 overflow-y-auto bg-zinc-50/50 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto bg-background custom-scrollbar">
           <div className="p-6 md:p-10 max-w-7xl mx-auto w-full">
             <div className="mb-10">
               <motion.div
@@ -167,7 +167,7 @@ export default function PlaybookPage() {
               >
                 <h2 className="text-4xl md:text-6xl font-serif font-black tracking-tight text-primary mb-6 leading-[1.1]">
                   {activeTopicId === 'all' 
-                    ? "Nâng tầm tri thức Sở hữu trí tuệ" 
+                    ? "Toàn bộ nội dung" 
                     : PLAYBOOK_DATA.find(t => t.id === activeTopicId)?.title}
                 </h2>
               </motion.div>
@@ -177,10 +177,10 @@ export default function PlaybookPage() {
               {filteredTopics.map((topic) => (
                 <section key={topic.id} className="space-y-6">
                   <div className="flex items-center gap-4">
-                    <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 whitespace-nowrap">
+                    <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground whitespace-nowrap">
                       {topic.title}
                     </h3>
-                    <div className="h-px flex-1 bg-zinc-200" />
+                    <div className="h-px flex-1 bg-border" />
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -207,17 +207,17 @@ export default function PlaybookPage() {
               
               {filteredTopics.length === 0 && (
                 <div className="flex flex-col items-center justify-center py-32 text-center">
-                  <div className="bg-zinc-100 p-8 rounded-full mb-6">
-                    <Search className="w-12 h-12 text-zinc-200" />
+                  <div className="bg-muted p-8 rounded-full mb-6">
+                    <Search className="w-12 h-12 text-muted-foreground/30" />
                   </div>
-                  <h3 className="text-2xl font-serif font-black text-zinc-900 mb-2">Không tìm thấy kết quả</h3>
-                  <p className="text-zinc-500">Hãy thử tìm kiếm với từ khóa khác hoặc chọn danh mục bên trái.</p>
+                  <h3 className="text-2xl font-serif font-black text-foreground mb-2">Không tìm thấy kết quả</h3>
+                  <p className="text-muted-foreground">Hãy thử tìm kiếm với từ khóa khác hoặc chọn danh mục bên trái.</p>
                 </div>
               )}
             </div>
             
             {/* Footer Info */}
-            <div className="mt-32 pt-16 border-t border-zinc-200 flex flex-col md:flex-row justify-between items-center gap-8 text-zinc-400">
+            <div className="mt-32 pt-16 border-t border-border flex flex-col md:flex-row justify-between items-center gap-8 text-muted-foreground">
               <div className="flex items-center gap-4">
                 <BookOpen className="w-5 h-5" />
                 <span className="text-[10px] font-black uppercase tracking-widest">© 2026 Cục Sở hữu Trí tuệ Việt Nam</span>
@@ -241,7 +241,7 @@ export default function PlaybookPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsSidebarOpen(false)}
-              className="fixed inset-0 bg-zinc-900/60 z-40 md:hidden backdrop-blur-md"
+              className="fixed inset-0 bg-black/60 z-40 md:hidden backdrop-blur-md"
             />
             <motion.aside
               initial={{ x: '-100%' }}
@@ -271,12 +271,12 @@ export default function PlaybookPage() {
                     className={cn(
                       "w-full flex items-center gap-3.5 px-5 py-3.5 rounded-2xl text-[13px] font-bold transition-all",
                       activeTopicId === 'all' 
-                        ? "bg-sidebar-accent text-sidebar-accent-foreground shadow-lg" 
-                        : "opacity-50 hover:opacity-100 hover:bg-sidebar-accent/30"
+                        ? "bg-amber-900/10 text-amber-900 shadow-sm" 
+                        : "opacity-50 hover:opacity-100 hover:bg-amber-900/5"
                     )}
                   >
                     <LayoutGrid className="w-4 h-4" />
-                    Tổng quan hệ thống
+                    Toàn bộ nội dung
                   </button>
                   
                   <div className="pt-10 pb-5">
