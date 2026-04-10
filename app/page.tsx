@@ -110,12 +110,12 @@ export default function PlaybookPage() {
                   className={cn(
                     "w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-[12px] font-bold transition-all duration-300 text-left",
                     activeTopicId === topic.id 
-                      ? "bg-sidebar-accent text-sidebar-accent-foreground shadow-md" 
-                      : "opacity-50 hover:opacity-100 hover:bg-sidebar-accent/20"
+                      ? "bg-amber-900/10 text-amber-900 shadow-sm" 
+                      : "opacity-50 hover:opacity-100 hover:bg-amber-900/5"
                   )}
                 >
                   <Icon className="w-4 h-4 shrink-0" />
-                  <span className="line-clamp-1">{topic.title}</span>
+                  <span className="line-clamp-1 uppercase tracking-wide">{topic.title}</span>
                 </button>
               );
             })}
@@ -294,12 +294,12 @@ export default function PlaybookPage() {
                         className={cn(
                           "w-full flex items-center gap-3.5 px-5 py-3.5 rounded-2xl text-[13px] font-bold transition-all text-left",
                           activeTopicId === topic.id 
-                            ? "bg-sidebar-accent text-sidebar-accent-foreground shadow-lg" 
-                            : "opacity-50 hover:opacity-100 hover:bg-sidebar-accent/30"
+                            ? "bg-amber-900/10 text-amber-900 shadow-sm" 
+                            : "opacity-50 hover:opacity-100 hover:bg-amber-900/5"
                         )}
                       >
                         <Icon className="w-4 h-4 shrink-0" />
-                        <span className="line-clamp-1">{topic.title}</span>
+                        <span className="line-clamp-1 uppercase tracking-wide">{topic.title}</span>
                       </button>
                     );
                   })}
