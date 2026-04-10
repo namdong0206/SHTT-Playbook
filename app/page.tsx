@@ -167,7 +167,7 @@ export default function PlaybookPage() {
               >
                 <h2 className="text-4xl md:text-6xl font-serif font-black tracking-tight text-primary mb-6 leading-[1.1]">
                   {activeTopicId === 'all' 
-                    ? "Toàn bộ nội dung" 
+                    ? "Nâng tầm tri thức Sở hữu trí tuệ" 
                     : PLAYBOOK_DATA.find(t => t.id === activeTopicId)?.title}
                 </h2>
               </motion.div>
