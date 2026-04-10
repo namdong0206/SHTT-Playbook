@@ -19,6 +19,7 @@ export interface PlaybookSubTopic {
 export interface PlaybookMainTopic {
   id: string;
   title: string;
+  shortTitle?: string;
   icon: string;
   subTopics: PlaybookSubTopic[];
 }
@@ -27,6 +28,7 @@ export const PLAYBOOK_DATA: PlaybookMainTopic[] = [
   {
     id: 'legal-framework',
     title: 'Khung khổ pháp luật và các điều ước quốc tế',
+    shortTitle: 'Khung khổ pháp luật',
     icon: 'Gavel',
     subTopics: [
       {
@@ -160,6 +162,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
   {
     id: 'training',
     title: 'Đào tạo và nâng cao nhận thức',
+    shortTitle: 'Nâng cao nhận thức',
     icon: 'GraduationCap',
     subTopics: [
       {
@@ -198,6 +201,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
   {
     id: 'cooperation',
     title: 'Hoạt động hợp tác quốc tế',
+    shortTitle: 'Hợp tác quốc tế',
     icon: 'Users',
     subTopics: [
       {
@@ -234,6 +238,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
   {
     id: 'statistics',
     title: 'Số liệu thống kê SHTT',
+    shortTitle: 'Số liệu thống kê',
     icon: 'BarChart3',
     subTopics: [
       {

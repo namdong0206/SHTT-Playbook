@@ -115,7 +115,7 @@ export default function PlaybookPage() {
                   )}
                 >
                   <Icon className="w-4 h-4 shrink-0" />
-                  <span className="line-clamp-1 uppercase tracking-wide">{topic.title}</span>
+                  <span className="line-clamp-1 uppercase tracking-wide">{topic.shortTitle || topic.title}</span>
                 </button>
               );
             })}
@@ -299,7 +299,7 @@ export default function PlaybookPage() {
                         )}
                       >
                         <Icon className="w-4 h-4 shrink-0" />
-                        <span className="line-clamp-1 uppercase tracking-wide">{topic.title}</span>
+                        <span className="line-clamp-1 uppercase tracking-wide">{topic.shortTitle || topic.title}</span>
                       </button>
                     );
                   })}
