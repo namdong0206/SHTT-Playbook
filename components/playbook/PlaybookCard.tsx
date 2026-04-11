@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 import { 
   Card, 
   CardContent, 
@@ -58,6 +60,19 @@ export function PlaybookCard({ subTopic, parentTitle }: PlaybookCardProps) {
   
   const handlePrint = () => {
     window.print();
+  };
+
+  const handleDownloadPDF = () => {
+    if (subTopic.pdfUrl) {
+      const link = document.createElement('a');
+      link.href = subTopic.pdfUrl;
+      link.download = `${subTopic.title}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      alert('Không tìm thấy file PDF cho mục này.');
+    }
   };
 
   return (
@@ -301,12 +316,12 @@ export function PlaybookCard({ subTopic, parentTitle }: PlaybookCardProps) {
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700" />
                   
                   <Button 
-                    onClick={handlePrint}
+                    onClick={handleDownloadPDF}
                     variant="secondary" 
                     className="w-full bg-white/10 hover:bg-white/20 border border-white/10 text-white font-bold text-[12px] uppercase tracking-widest h-14 rounded-2xl flex items-center justify-center gap-4 transition-all shadow-lg"
                   >
-                    <Printer className="w-5 h-5" />
-                    Xuất báo cáo chi tiết (PDF)
+                    <FileText className="w-5 h-5" />
+                    Tải về tài liệu (PDF)
                   </Button>
                 </div>
               </div>

@@ -9,6 +9,7 @@ export interface PlaybookSubTopic {
   title: string;
   summary: string;
   content: string;
+  pdfUrl?: string;
   charts?: {
     type: 'pie' | 'bar' | 'line' | 'donut' | 'area';
     title: string;
@@ -34,6 +35,7 @@ export const PLAYBOOK_DATA: PlaybookMainTopic[] = [
       {
         id: 'legal-framework-shtt',
         title: 'Khung khổ pháp luật về SHTT',
+        pdfUrl: '/pdfs/Khung khổ pháp luật về SHTT.pdf',
         summary: 'Hệ thống pháp luật SHTT Việt Nam được xây dựng dựa trên nền tảng Luật SHTT 2005 và các đợt sửa đổi quan trọng (2009, 2019, 2022, 2025). Đây là hành lang pháp lý cốt lõi điều chỉnh các quan hệ về quyền tác giả, quyền liên quan, sở hữu công nghiệp và giống cây trồng. Đặc biệt, Luật sửa đổi năm 2025 đánh dấu bước ngoặt lớn trong việc cải cách thủ tục hành chính, thúc đẩy khai thác thương mại tài sản trí tuệ và bảo hộ các đối tượng mới trong kỷ nguyên số như AI và sản phẩm phi vật lý.',
         content: `Qua thực tiễn 20 năm thi hành, Luật SHTT đã phát huy vai trò to lớn trong việc tạo hành lang pháp lý cho các tổ chức, cá nhân xác lập, khai thác và bảo vệ quyền SHTT, tạo môi trường kinh doanh lành mạnh cho hoạt động sản xuất - kinh doanh, góp phần khuyến khích hoạt động sáng tạo, đẩy mạnh chuyển giao công nghệ, thu hút đầu tư nước ngoài, thúc đẩy sự phát triển kinh tế - xã hội của đất nước.
 
@@ -57,6 +59,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'asean-treaties',
         title: 'Các hiệp định đa phương trong khuôn khổ ASEAN',
+        pdfUrl: '/pdfs/Các hiệp định đa phương trong khuôn khổ ASEAN.pdf',
         summary: 'Hợp tác SHTT trong ASEAN là một trụ cột quan trọng nhằm thiết lập khu vực kinh tế cạnh tranh và đổi mới. Thông qua Hiệp định khung ASEAN (1995) và các hiệp định FTA với các đối tác lớn như Ấn Độ, Nhật Bản, Trung Quốc, Hàn Quốc, Úc và New Zealand, các quốc gia thành viên đã xây dựng cơ chế phối hợp chặt chẽ. Đặc biệt, Hiệp định RCEP đại diện cho cam kết cao nhất về SHTT trong khu vực, đặt ra các tiêu chuẩn bảo hộ toàn diện hỗ trợ chuỗi cung ứng và thương mại điện tử xuyên biên giới.',
         content: `Trong phạm vi nội khối, các quốc gia thành viên ASEAN đã ký kết một số điều ước quốc tế, thỏa thuận hợp tác trong lĩnh vực SHTT nhằm tăng cường hoạt động hợp tác, thúc đẩy phổ biến và chuyển giao công nghệ, vì lợi ích chung của Cộng đồng.
 
@@ -72,6 +75,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'global-ftas',
         title: 'Các Hiệp định FTA thế hệ mới và song phương',
+        pdfUrl: '/pdfs/Các Hiệp định FTA thế hệ mới và song phương.pdf',
         summary: 'Việt Nam đã chủ động tham gia vào mạng lưới các FTA thế hệ mới với tiêu chuẩn bảo hộ SHTT ở mức cao (TRIPS+). Các hiệp định như CPTPP, EVFTA và UKVFTA không chỉ mở rộng phạm vi bảo hộ đối với chỉ dẫn địa lý, sáng chế và kiểu dáng mà còn thắt chặt các biện pháp thực thi quyền trên môi trường số. Việc thực thi các cam kết này đòi hỏi sự điều chỉnh linh hoạt của pháp luật nội địa, đồng thời tạo ra lợi thế cạnh tranh lớn cho các sản phẩm đặc sản của Việt Nam trên thị trường quốc tế.',
         content: `Việt Nam đã tham gia và thực thi nhiều hiệp định thương mại tự do (FTA) thế hệ mới với các tiêu chuẩn bảo hộ SHTT rất cao (TRIPS+).
 
@@ -95,6 +99,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'enforcement-trends',
         title: 'Đánh giá chung và Xu hướng vi phạm',
+        pdfUrl: '/pdfs/Đánh giá chung và Xu hướng vi phạm.pdf',
         summary: 'Thực trạng xâm phạm quyền SHTT tại Việt Nam đang có sự dịch chuyển mạnh mẽ từ môi trường truyền thống sang không gian mạng với các thủ đoạn tinh vi và tính ẩn danh cao. Việc lợi dụng thương mại điện tử, mạng xã hội và các nền tảng livestream để kinh doanh hàng giả, hàng nhái đã trở thành thách thức lớn cho các cơ quan chức năng. Các đối tượng vi phạm hiện nay không chỉ dừng lại ở quy mô nhỏ lẻ mà đã hình thành các đường dây xuyên biên giới, ứng dụng công nghệ cao như AI để lừa dối người tiêu dùng.',
         content: `Tình hình xâm phạm quyền SHCN và sản xuất, buôn bán hàng giả mạo nhãn hiệu, chỉ dẫn địa lý tại Việt Nam tiếp tục diễn biến phức tạp, gia tăng về quy mô và mức độ tinh vi.
 
@@ -109,6 +114,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'enforcement-results',
         title: 'Kết quả hỗ trợ thực thi quyền SHTT',
+        pdfUrl: '/pdfs/Kết quả hỗ trợ công tác thực thi quyền SHTT.pdf',
         summary: 'Công tác thực thi quyền SHTT đã đạt được những kết quả thực chất thông qua sự phối hợp liên ngành chặt chẽ giữa Cục SHTT và các lực lượng Công an, Quản lý thị trường, Hải quan. Cục SHTT đã phát huy vai trò nòng cốt trong việc cung cấp ý kiến chuyên môn, hỗ trợ giám định và tham mưu hoàn thiện thể chế xử phạt vi phạm hành chính. Các chỉ số về số lượng ý kiến chuyên môn và các vụ việc xử lý thành công qua các năm cho thấy nỗ lực không ngừng trong việc bảo vệ quyền lợi hợp pháp của chủ thể quyền và người tiêu dùng.',
         content: `Cục SHTT đóng vai trò đầu mối trong việc hoàn thiện thể chế và cung cấp ý kiến chuyên môn cho các lực lượng thực thi pháp luật.
 
@@ -168,6 +174,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'training-overview',
         title: 'Tổng quan công tác đào tạo giai đoạn 2021-2025',
+        pdfUrl: '/pdfs/Tổng quan công tác đào tạo, nâng cao nhận thức giai đoạn 2021-2025.pdf',
         summary: 'Các hoạt động bồi dưỡng kiến thức, kỹ năng và phát triển nguồn nhân lực SHTT.',
         content: `Cục SHTT đã triển khai đồng bộ các giải pháp đào tạo nhằm nâng cao năng lực cho cán bộ quản lý, thực thi và nhận thức của cộng đồng.
 
@@ -182,6 +189,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'events-2025',
         title: 'Các hội thảo và sự kiện tiêu biểu năm 2025',
+        pdfUrl: '/pdfs/Các hội thảo, sự kiện, hoạt động của Cục SHTT trong năm 2025.pdf',
         summary: 'Danh sách các hoạt động trọng điểm nhằm phổ biến kiến thức SHTT.',
         content: `Năm 2025 chứng kiến nhiều sự kiện quan trọng với sự tham gia của các đối tác quốc tế và cộng đồng doanh nghiệp.
 
@@ -207,31 +215,68 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'cooperation-overview',
         title: 'Tổng quan và Xu hướng hợp tác kỷ nguyên số',
+        pdfUrl: '/pdfs/Tổng quan và Xu hướng hợp tác kỷ nguyên số.pdf',
         summary: 'Khuôn khổ hợp tác đa phương, song phương và sự chuyển dịch sang tài sản vô hình.',
         content: `Việt Nam đang triển khai 25 thỏa thuận hợp tác quốc tế (05 đa phương, 20 song phương), củng cố vị thế trên bản đồ SHTT thế giới.
-
-**Khuôn khổ hợp tác:**
-- **Đa phương:** WTO (TRIPS), WIPO, APEC (IPEG), ASEAN (AWGIPC).
-- **Song phương:** 15 đối tác trọng điểm tại Châu Âu (EPO, EUIPO, Pháp...), Châu Mỹ (USPTO, Cuba), Châu Á (Nhật Bản, Hàn Quốc, Trung Quốc, Singapore...).
-
-**Xu hướng trong kỷ nguyên số:**
-1. **Tài chính hóa SHTT:** Đầu tư vô hình tăng trưởng gấp 3 lần hữu hình, chiếm 14% GDP toàn cầu năm 2024.
-2. **Mở rộng đối tượng bảo hộ:** AI, thuật toán, dữ liệu huấn luyện, giao diện phi vật lý.
-3. **Hiện đại hóa cơ quan SHTT:** Ứng dụng Cloud, AI và Big Data để tự động hóa quy trình thẩm định.
-4. **Giải quyết thách thức toàn cầu:** SHTT hỗ trợ công nghệ xanh, năng lượng tái tạo và y tế cộng đồng (WIPO GREEN, Medicines Patent Pool).`,
+ 
+ **Khuôn khổ hợp tác:**
+ - **Đa phương:** WTO (TRIPS), WIPO, APEC (IPEG), ASEAN (AWGIPC).
+ - **Song phương:** 15 đối tác trọng điểm tại Châu Âu (EPO, EUIPO, Pháp...), Châu Mỹ (USPTO, Cuba), Châu Á (Nhật Bản, Hàn Quốc, Trung Quốc, Singapore...).
+ 
+ **Xu hướng trong kỷ nguyên số:**
+ 1. **Tài chính hóa SHTT:** Đầu tư vô hình tăng trưởng gấp 3 lần hữu hình, chiếm 14% GDP toàn cầu năm 2024.
+ 2. **Mở rộng đối tượng bảo hộ:** AI, thuật toán, dữ liệu huấn luyện, giao diện phi vật lý.
+ 3. **Hiện đại hóa cơ quan SHTT:** Ứng dụng Cloud, AI và Big Data để tự động hóa quy trình thẩm định.
+ 4. **Giải quyết thách thức toàn cầu:** SHTT hỗ trợ công nghệ xanh, năng lượng tái tạo và y tế cộng đồng (WIPO GREEN, Medicines Patent Pool).`,
       },
       {
-        id: 'bilateral-partners',
-        title: 'Tình hình hợp tác với các đối tác tiêu biểu',
-        summary: 'Chi tiết các dự án và kết quả hợp tác với WIPO, Nhật Bản, Hàn Quốc, EU...',
-        content: `Hợp tác song phương đạt nhiều kết quả thực chất, hỗ trợ trực tiếp cho quá trình hiện đại hóa hệ thống SHTT Việt Nam.
+        id: 'cooperation-multilateral',
+        title: 'Hợp tác đa phương',
+        pdfUrl: '/pdfs/Hợp tác đa phương.pdf',
+        summary: 'Các khuôn khổ hợp tác đa phương bao gồm WTO, ASEAN, APEC và WIPO, tập trung vào hài hòa hóa pháp luật, nâng cao năng lực thực thi và xây dựng các cơ chế hợp tác khu vực và toàn cầu.',
+        content: `Việt Nam tham gia tích cực vào các khuôn khổ hợp tác đa phương về SHTT:
+- **Tổ chức Thương mại thế giới (WTO):** Hội đồng Hiệp định về các khía cạnh liên quan đến thương mại quyền SHTT (TRIPS).
+- **Tổ chức SHTT thế giới (WIPO).**
+- **Diễn đàn Hợp tác Kinh tế châu Á Thái Bình Dương (APEC):** Nhóm chuyên gia APEC về SHTT (IPEG).
+- **ASEAN:** Nhóm công tác về Hợp tác SHTT các nước ASEAN (AWGIPC); hợp tác giữa ASEAN với các đối tác của ASEAN.`
+      },
+      {
+        id: 'cooperation-bilateral',
+        title: 'Hợp tác song phương',
+        pdfUrl: '/pdfs/Hợp tác song phương.pdf',
+        summary: 'Quan hệ hợp tác song phương sâu sắc với 15 đối tác trọng điểm tại Châu Âu, Châu Mỹ và Châu Á.',
+        content: `Hợp tác song phương đạt nhiều kết quả thực chất thông qua các hoạt động đào tạo, trao đổi kinh nghiệm và dự án hỗ trợ kỹ thuật:
 
-**Các đối tác chiến lược:**
-- **WIPO:** Ký Bản ghi nhớ tháng 9/2025, hỗ trợ dự án WIPO IPAS, số hóa tư liệu sáng chế và phân tích chỉ số đổi mới sáng tạo (GII, PII).
-- **Nhật Bản (JPO/JICA):** Triển khai 05 dự án ODA, hỗ trợ bảo hộ chỉ dẫn địa lý (Thanh long Bình Thuận, Vải thiều Lục Ngạn tại Nhật Bản).
-- **Hàn Quốc (KIPO):** Chương trình PPH rút ngắn thời gian thẩm định sáng chế, dự án IP Sharing hỗ trợ cộng đồng (lụa Mã Châu, xử lý nước thải).
-- **Châu Âu (EPO/EUIPO):** Đào tạo thẩm định viên, tích hợp dữ liệu vào hệ thống TMview và Designview toàn cầu.
-- **Pháp (INPI):** Kỷ niệm 30 năm hợp tác, tập trung vào quản trị cơ quan SHTT và kiểm soát chất lượng.`,
+**a. Châu Âu (06 đối tác):**
+- Cơ quan Sáng chế châu Âu (EPO).
+- Cơ quan SHTT châu Âu (EUIPO).
+- Cơ quan SHTT Vương quốc Anh (UKIPO).
+- Viện SHCN Pháp (INPI).
+- Cơ quan SHTT Liên bang Nga (ROSPATENT).
+- Trung tâm SHTT quốc gia Belarus (NCIP).
+
+**b. Châu Mỹ (02 đối tác):**
+- Cơ quan Sáng chế và Nhãn hiệu Hoa Kỳ (USPTO).
+- Cơ quan SHTT Cuba (OCIP).
+
+**c. Châu Á (07 đối tác):**
+- Cơ quan Sáng chế Nhật Bản (JPO) và Cục Công nghiệp Thực phẩm Nhật Bản (FIAB).
+- Bộ SHTT Hàn Quốc (KIPO).
+- Cơ quan SHTT Trung Quốc (CNIPA).
+- Cơ quan SHTT Lào (DIP Lào).
+- Cơ quan SHTT Singapore (IPOS).
+- Cơ quan SHTT Thái Lan (DIP Thái Lan).`,
+        charts: [
+          {
+            type: 'pie',
+            title: 'Phân bổ đối tác hợp tác song phương theo vùng',
+            data: [
+              { name: 'Châu Âu', value: 6 },
+              { name: 'Châu Mỹ', value: 2 },
+              { name: 'Châu Á', value: 7 },
+            ]
+          }
+        ]
       }
     ]
   },
@@ -244,6 +289,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'general-stats',
         title: 'Tổng quan đơn đăng ký và văn bằng bảo hộ',
+        pdfUrl: '/pdfs/Tổng quan đơn đăng ký và văn bằng bảo hộ.pdf',
         summary: 'Giai đoạn 2021-2025 chứng kiến sự bùng nổ về số lượng đơn đăng ký và văn bằng bảo hộ được cấp, phản ánh sự sôi động của hoạt động đổi mới sáng tạo và nhận thức ngày càng cao về SHTT. Với tổng cộng hơn 423.000 đơn tiếp nhận và hơn 255.000 văn bằng được cấp, hệ thống SHTT Việt Nam đã vận hành với hiệu suất cao, tốc độ tăng trưởng trung bình hàng năm đạt mức ấn tượng. Đây là minh chứng cho sự phục hồi mạnh mẽ của nền kinh tế và nỗ lực cải cách quy trình thẩm định của cơ quan quản lý.',
         content: `Giai đoạn 2021-2025 ghi nhận sự tăng trưởng mạnh mẽ trong tất cả các khâu từ tiếp nhận đến cấp văn bằng.
 
@@ -284,6 +330,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'patent-stats',
         title: 'Số liệu về Sáng chế và Giải pháp hữu ích',
+        pdfUrl: '/pdfs/Số liệu về Sáng chế và Giải pháp hữu ích.pdf',
         summary: 'Phân tích chi tiết đơn đăng ký theo chủ thể, lĩnh vực và xu hướng công nghệ chiến lược.',
         content: `Lĩnh vực sáng chế và GPHU có sự bứt phá mạnh mẽ, đặc biệt là từ các chủ thể trong nước.
 
@@ -344,6 +391,7 @@ Có hiệu lực từ ngày 01/4/2026, tập trung vào các nội dung:
       {
         id: 'trademark-design-stats',
         title: 'Số liệu về Nhãn hiệu và Kiểu dáng công nghiệp',
+        pdfUrl: '/pdfs/Số liệu về Nhãn hiệu và Kiểu dáng công nghiệp.pdf',
         summary: 'Thống kê đơn đăng ký quốc gia, quốc tế và phân loại theo ngành hàng.',
         content: `Nhãn hiệu và Kiểu dáng công nghiệp duy trì vị thế là nhóm có số lượng xác lập quyền lớn nhất.
 
